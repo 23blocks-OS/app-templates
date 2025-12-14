@@ -1,6 +1,7 @@
 'use client';
 
-import { Blocks23Provider } from '@23blocks/react';
+import React from 'react';
+import { Provider } from '@23blocks/react';
 import { blocksConfig } from '@/lib/blocks-config';
 
 interface ProvidersProps {
@@ -9,8 +10,13 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <Blocks23Provider config={blocksConfig}>
+    <Provider
+      appId={blocksConfig.appId}
+      urls={blocksConfig.urls}
+      authMode={blocksConfig.authMode}
+      storage={blocksConfig.storage}
+    >
       {children}
-    </Blocks23Provider>
+    </Provider>
   );
 }

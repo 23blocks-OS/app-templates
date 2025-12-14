@@ -1,15 +1,18 @@
 'use client';
 
-import { useBlocks23 } from '@23blocks/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useAuth } from '@23blocks/react';
 import styles from './page.module.css';
 
 export default function Home() {
-  const { auth, isAuthenticated, user } = useBlocks23();
+  const { signIn, signOut, isAuthenticated } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+
+  const authenticated = isAuthenticated();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +20,8 @@ export default function Home() {
     setLoading(true);
 
     try {
-      await auth.signIn({ email, password });
+      await signIn({ email, password });
+      setUserEmail(email);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Sign in failed');
     } finally {
@@ -27,7 +31,8 @@ export default function Home() {
 
   const handleSignOut = async () => {
     try {
-      await auth.signOut();
+      await signOut();
+      setUserEmail(null);
     } catch (err) {
       console.error('Sign out failed:', err);
     }
@@ -38,9 +43,9 @@ export default function Home() {
       <div className={styles.container}>
         <h1 className={styles.title}>23blocks Next.js Template</h1>
 
-        {isAuthenticated ? (
+        {authenticated ? (
           <div className={styles.card}>
-            <h2>Welcome, {user?.email}</h2>
+            <h2>Welcome{userEmail ? `, ${userEmail}` : ''}!</h2>
             <p>You are signed in.</p>
             <button onClick={handleSignOut} className={styles.button}>
               Sign Out

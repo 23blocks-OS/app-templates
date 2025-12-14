@@ -1,6 +1,6 @@
-import type { ProviderConfig } from '@23blocks/react';
+import type { ServiceUrls, AuthMode, StorageType } from '@23blocks/react';
 
-export const blocksConfig: ProviderConfig = {
+export const blocksConfig = {
   appId: process.env.NEXT_PUBLIC_23BLOCKS_APP_ID || '',
 
   // Configure only the services you need
@@ -29,9 +29,9 @@ export const blocksConfig: ProviderConfig = {
     ...(process.env.NEXT_PUBLIC_23BLOCKS_SEARCH_URL && {
       search: process.env.NEXT_PUBLIC_23BLOCKS_SEARCH_URL,
     }),
-  },
+  } as ServiceUrls,
 
   // Auth configuration
-  authMode: 'token', // or 'cookie' for httpOnly cookie auth
-  storage: 'localStorage', // or 'sessionStorage' | 'memory'
+  authMode: 'token' as AuthMode, // or 'cookie' for httpOnly cookie auth
+  storage: 'localStorage' as StorageType, // or 'sessionStorage' | 'memory'
 };
