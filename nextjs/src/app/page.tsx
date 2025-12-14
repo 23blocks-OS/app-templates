@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '@23blocks/react';
-import styles from './page.module.css';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function Home() {
   const { signIn, signOut, isAuthenticated } = useAuth();
@@ -39,62 +42,85 @@ export default function Home() {
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>23blocks Next.js Template</h1>
+    <main className="min-h-screen flex flex-col items-center justify-center p-8 bg-background">
+      <div className="w-full max-w-md space-y-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight">23blocks</h1>
+          <p className="text-muted-foreground mt-2">Next.js Template</p>
+        </div>
 
         {authenticated ? (
-          <div className={styles.card}>
-            <h2>Welcome{userEmail ? `, ${userEmail}` : ''}!</h2>
-            <p>You are signed in.</p>
-            <button onClick={handleSignOut} className={styles.button}>
-              Sign Out
-            </button>
-          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Welcome{userEmail ? `, ${userEmail}` : ''}!</CardTitle>
+              <CardDescription>You are signed in.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button onClick={handleSignOut} variant="outline" className="w-full">
+                Sign Out
+              </Button>
+            </CardContent>
+          </Card>
         ) : (
-          <form onSubmit={handleSignIn} className={styles.card}>
-            <h2>Sign In</h2>
+          <Card>
+            <CardHeader>
+              <CardTitle>Sign In</CardTitle>
+              <CardDescription>Enter your credentials to access your account</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSignIn} className="space-y-4">
+                {error && (
+                  <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md">
+                    {error}
+                  </div>
+                )}
 
-            {error && <p className={styles.error}>{error}</p>}
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={loading}
+                  />
+                </div>
 
-            <div className={styles.field}>
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={loading}
-              />
-            </div>
+                <div className="space-y-2">
+                  <Label htmlFor="password">Password</Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    disabled={loading}
+                  />
+                </div>
 
-            <div className={styles.field}>
-              <label htmlFor="password">Password</label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                disabled={loading}
-              />
-            </div>
-
-            <button type="submit" className={styles.button} disabled={loading}>
-              {loading ? 'Signing in...' : 'Sign In'}
-            </button>
-          </form>
+                <Button type="submit" className="w-full" disabled={loading}>
+                  {loading ? 'Signing in...' : 'Sign In'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         )}
 
-        <div className={styles.info}>
-          <h3>Getting Started</h3>
-          <ol>
-            <li>Copy <code>.env.example</code> to <code>.env.local</code></li>
-            <li>Fill in your 23blocks App ID and service URLs</li>
-            <li>Run <code>npm install</code> and <code>npm run dev</code></li>
-          </ol>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Getting Started</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
+              <li>Copy <code className="bg-muted px-1 py-0.5 rounded">.env.example</code> to <code className="bg-muted px-1 py-0.5 rounded">.env.local</code></li>
+              <li>Fill in your 23blocks App ID and service URLs</li>
+              <li>Run <code className="bg-muted px-1 py-0.5 rounded">npm run dev</code></li>
+            </ol>
+          </CardContent>
+        </Card>
       </div>
     </main>
   );
