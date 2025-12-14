@@ -1,0 +1,29 @@
+# dependencies
+/node_modules
+
+# build outputs
+/dist
+/out-tsc
+
+# IDEs
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.angular/cache
+.DS_Store
+Thumbs.db
+
+# environment files
+src/environments/environment.ts
+src/environments/environment.prod.ts

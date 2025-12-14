@@ -1,0 +1,121 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #1a1a1a;
+  }
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .field input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: white;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #0060df;
+}
+
+.button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.info {
+  background: rgba(0, 112, 243, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.info h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.info ol {
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.info code {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  .info code {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
