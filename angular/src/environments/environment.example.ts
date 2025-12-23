@@ -4,8 +4,8 @@
 export const environment = {
   production: false,
 
-  // Required: Your 23blocks App ID
-  appId: 'your-app-id',
+  // Required: Your 23blocks API Key
+  apiKey: 'your-api-key',
 
   // Service URLs (only configure the services you need)
   urls: {

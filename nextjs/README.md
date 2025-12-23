@@ -26,7 +26,7 @@ Edit `.env.local` to configure your 23blocks services:
 
 ```env
 # Required
-NEXT_PUBLIC_23BLOCKS_APP_ID=your-app-id
+NEXT_PUBLIC_23BLOCKS_API_KEY=your-api-key
 
 # Service URLs (configure only what you need)
 NEXT_PUBLIC_23BLOCKS_AUTH_URL=https://auth.your-domain.com
@@ -63,7 +63,7 @@ export function MyComponent() {
 ```ts
 // In src/lib/blocks-config.ts
 export const blocksConfig = {
-  appId: '...',
+  apiKey: '...',
   urls: { ... },
   authMode: 'token',
   storage: 'localStorage', // or 'sessionStorage' | 'memory'
@@ -73,7 +73,7 @@ export const blocksConfig = {
 **Cookie mode (recommended for production):**
 ```ts
 export const blocksConfig = {
-  appId: '...',
+  apiKey: '...',
   urls: { ... },
   authMode: 'cookie', // Backend sets httpOnly cookies
 };

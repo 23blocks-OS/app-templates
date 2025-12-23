@@ -28,7 +28,7 @@ Edit `src/environments/environment.ts`:
 ```typescript
 export const environment = {
   production: false,
-  appId: 'your-app-id',
+  apiKey: 'your-api-key',
   urls: {
     authentication: 'https://auth.your-domain.com',
     products: 'https://products.your-domain.com',
@@ -50,7 +50,7 @@ import { environment } from './environments/environment';
 bootstrapApplication(AppComponent, {
   providers: [
     provideBlocks23({
-      appId: environment.appId,
+      apiKey: environment.apiKey,
       urls: environment.urls,
       authMode: environment.authMode,
       storage: environment.storage,
@@ -93,7 +93,7 @@ export class MyComponent {
 **Token mode (default):**
 ```typescript
 provideBlocks23({
-  appId: '...',
+  apiKey: '...',
   urls: { ... },
   authMode: 'token',
   storage: 'localStorage', // or 'sessionStorage' | 'memory'
@@ -103,7 +103,7 @@ provideBlocks23({
 **Cookie mode (recommended for production):**
 ```typescript
 provideBlocks23({
-  appId: '...',
+  apiKey: '...',
   urls: { ... },
   authMode: 'cookie', // Backend sets httpOnly cookies
 });

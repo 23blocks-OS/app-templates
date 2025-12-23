@@ -6,8 +6,9 @@ Starter templates for building applications with the [23blocks SDK](https://gith
 
 | Template | Description |
 |----------|-------------|
-| [nextjs](./nextjs) | Next.js 14 with App Router |
-| [angular](./angular) | Angular 18 standalone components |
+| [nextjs](./nextjs) | Next.js 15 with App Router |
+| [angular](./angular) | Angular 19 standalone components |
+| [mobile](./mobile) | React Native (Expo) with secure storage |
 
 ## Quick Start
 
@@ -19,6 +20,9 @@ npx degit 23blocks-OS/app-templates/nextjs my-nextjs-app
 
 # Angular template
 npx degit 23blocks-OS/app-templates/angular my-angular-app
+
+# React Native (Expo) template
+npx degit 23blocks-OS/app-templates/mobile my-mobile-app
 ```
 
 Then follow the README in each template for configuration instructions.
@@ -39,7 +43,7 @@ All templates use the same configuration pattern:
 
 ```typescript
 {
-  appId: 'your-app-id',
+  apiKey: 'your-api-key',
   urls: {
     authentication: 'https://auth.your-domain.com',
     products: 'https://products.your-domain.com',

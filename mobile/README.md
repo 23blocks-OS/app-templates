@@ -35,7 +35,7 @@ npm install
 Create a `.env` file in the root of your project:
 
 ```env
-EXPO_PUBLIC_BLOCKS_APP_ID=your-app-id
+EXPO_PUBLIC_BLOCKS_API_KEY=your-api-key
 EXPO_PUBLIC_BLOCKS_TENANT_ID=your-tenant-id
 EXPO_PUBLIC_BLOCKS_AUTH_URL=https://gateway.23blocks.com
 ```
@@ -95,7 +95,7 @@ import { secureStorage } from '@/lib/secure-storage';
 export function Providers({ children }) {
   return (
     <Provider
-      appId={blocksConfig.appId}
+      apiKey={blocksConfig.apiKey}
       tenantId={blocksConfig.tenantId}
       urls={blocksConfig.urls}
       customStorage={secureStorage}  // Use SecureStore for React Native
@@ -192,7 +192,7 @@ function RootIndex() {
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `EXPO_PUBLIC_BLOCKS_APP_ID` | Your 23blocks application ID | Yes |
+| `EXPO_PUBLIC_BLOCKS_API_KEY` | Your 23blocks API Key | Yes |
 | `EXPO_PUBLIC_BLOCKS_TENANT_ID` | Your tenant ID (if multi-tenant) | No |
 | `EXPO_PUBLIC_BLOCKS_AUTH_URL` | Authentication service URL | Yes |
 | `EXPO_PUBLIC_BLOCKS_SEARCH_URL` | Search service URL | No |

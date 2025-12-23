@@ -11,7 +11,7 @@ interface ProvidersProps {
 export function Providers({ children }: ProvidersProps) {
   return (
     <Provider
-      appId={blocksConfig.appId}
+      apiKey={blocksConfig.apiKey}
       urls={blocksConfig.urls}
       authMode={blocksConfig.authMode}
       storage={blocksConfig.storage}

@@ -1,7 +1,7 @@
 import type { ServiceUrls, AuthMode, StorageType } from '@23blocks/react';
 
 export const blocksConfig = {
-  appId: process.env.NEXT_PUBLIC_23BLOCKS_APP_ID || '',
+  apiKey: process.env.NEXT_PUBLIC_23BLOCKS_API_KEY || '',
 
   // Configure only the services you need
   urls: {

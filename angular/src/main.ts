@@ -9,7 +9,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
     provideBlocks23({
-      appId: environment.appId,
+      apiKey: environment.apiKey,
       urls: environment.urls,
       authMode: environment.authMode,
       storage: environment.storage,
