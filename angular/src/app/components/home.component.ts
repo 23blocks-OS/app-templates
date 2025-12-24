@@ -192,7 +192,7 @@ export class HomeComponent {
       this.authService.signIn({ email: this.email, password: this.password }).subscribe({
         next: (response) => {
           this.isAuthenticated.set(true);
-          this.userEmail.set(response.data?.attributes?.email ?? this.email);
+          this.userEmail.set(response.user?.email ?? this.email);
           this.loading.set(false);
         },
         error: (err) => {
