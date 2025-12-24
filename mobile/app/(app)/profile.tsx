@@ -60,7 +60,7 @@ export default function ProfileScreen() {
             <InfoRow label="Email" value={user?.email || 'N/A'} />
             <InfoRow
               label="Email Verified"
-              value={user?.confirmed ? 'Yes' : 'No'}
+              value={user?.confirmedAt ? 'Yes' : 'No'}
             />
             <InfoRow
               label="Created"
