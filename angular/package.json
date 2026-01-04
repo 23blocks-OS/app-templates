@@ -1,7 +1,27 @@
 {
   "name": "23blocks-angular-template",
   "version": "0.1.0",
+  "description": "Angular 19 starter template with 23blocks SDK for authentication and backend integration",
   "private": true,
+  "license": "MIT",
+  "author": "23blocks",
+  "homepage": "https://23blocks.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/23blocks-OS/app-templates.git",
+    "directory": "angular"
+  },
+  "bugs": {
+    "url": "https://github.com/23blocks-OS/app-templates/issues"
+  },
+  "keywords": [
+    "23blocks",
+    "angular",
+    "starter-template",
+    "authentication",
+    "typescript",
+    "rxjs"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

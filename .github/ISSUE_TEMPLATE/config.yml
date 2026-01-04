@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 23blocks Documentation
+    url: https://23blocks.com/developers
+    about: Check the official documentation for setup and usage guides
+  - name: 23blocks SDK
+    url: https://github.com/23blocks-OS/frontend-sdk
+    about: For SDK-specific issues, please use the SDK repository

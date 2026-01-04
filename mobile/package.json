@@ -1,7 +1,27 @@
 {
   "name": "23blocks-mobile-template",
   "version": "0.1.0",
-  "description": "React Native template app using @23blocks/react SDK",
+  "description": "React Native (Expo) starter template with 23blocks SDK for authentication and secure token storage",
+  "license": "MIT",
+  "author": "23blocks",
+  "homepage": "https://23blocks.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/23blocks-OS/app-templates.git",
+    "directory": "mobile"
+  },
+  "bugs": {
+    "url": "https://github.com/23blocks-OS/app-templates/issues"
+  },
+  "keywords": [
+    "23blocks",
+    "react-native",
+    "expo",
+    "mobile",
+    "starter-template",
+    "authentication",
+    "typescript"
+  ],
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
