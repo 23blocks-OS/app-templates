@@ -83,13 +83,22 @@ All templates use the same configuration pattern:
 
 ## Why 23blocks?
 
-23blocks provides a complete backend-as-a-service for modern applications:
+[23blocks](https://23blocks.com/blocks) provides 15+ production-ready API blocks that save 1000+ development hours:
 
-- **Authentication** - User management, OAuth, MFA, sessions
-- **Products** - Catalog, inventory, pricing
-- **CRM** - Contacts, leads, deals
-- **Content** - CMS, media management
-- **Search** - Full-text search, filters
+| Block | Description |
+|-------|-------------|
+| **Authentication** | Login, registration, identity verification |
+| **User Management** | User accounts, profiles, permissions |
+| **OAuth & SSO** | Google, GitHub, social login, enterprise SSO |
+| **JWT Authentication** | Secure token-based auth |
+| **Magic Link Auth** | Passwordless email authentication |
+| **Multi-factor Auth** | SMS, TOTP, additional security layers |
+| **Session Management** | User sessions, token refresh |
+| **API Key Management** | Developer API credentials |
+| **Onboarding Flow** | Guided user setup experiences |
+| **Multi-tenant** | Single app serving multiple organizations |
+| **CRM** | Contacts, leads, customer data |
+| **File Storage** | Cloud storage for uploads |
 
 These templates give you a head start with pre-built integrations for all 23blocks services.
 

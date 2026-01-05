@@ -53,7 +53,7 @@ All templates follow the same configuration pattern:
 
 1. **Configuration file** (`lib/blocks-config.ts` or `environments/environment.ts`) - defines `apiKey`, `urls`, `authMode`, and `storage`
 2. **Provider wrapper** - wraps the app with the SDK's Provider component/function
-3. **Service URLs** - only configure the services you need (authentication, products, crm, etc.)
+3. **Service URLs** - only configure the services you need (authentication, crm, files, etc.). See [23blocks.com/blocks](https://23blocks.com/blocks) for full list.
 
 ### Auth Modes
 - `token` (default): SDK stores tokens in browser/device storage, attaches `Authorization: Bearer` header
