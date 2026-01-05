@@ -19,31 +19,45 @@ Production-ready starter templates for building web and mobile applications with
 
 ## Available Templates
 
-| Template | Framework | Version | Description |
-|----------|-----------|---------|-------------|
-| [**nextjs**](./nextjs) | Next.js 15 + React 19 | [![npm](https://img.shields.io/npm/v/@23blocks/react)](https://www.npmjs.com/package/@23blocks/react) | App Router, Server Components, Tailwind CSS |
-| [**angular**](./angular) | Angular 19 | [![npm](https://img.shields.io/npm/v/@23blocks/angular)](https://www.npmjs.com/package/@23blocks/angular) | Standalone components, RxJS, reactive forms |
-| [**mobile**](./mobile) | React Native (Expo 52) | [![npm](https://img.shields.io/npm/v/@23blocks/react)](https://www.npmjs.com/package/@23blocks/react) | Expo Router, secure token storage |
+Choose your framework and click **"Use this template"** to create your own repository:
+
+| Template | Framework | Description | |
+|----------|-----------|-------------|---|
+| [**Next.js**](https://github.com/23blocks-OS/nextjs-template) | Next.js 15 + React 19 | App Router, Server Components, Tailwind CSS | [![Use Template](https://img.shields.io/badge/Use_Template-green?style=for-the-badge)](https://github.com/23blocks-OS/nextjs-template/generate) |
+| [**Angular**](https://github.com/23blocks-OS/angular-template) | Angular 19 | Standalone components, RxJS, reactive forms | [![Use Template](https://img.shields.io/badge/Use_Template-green?style=for-the-badge)](https://github.com/23blocks-OS/angular-template/generate) |
+| [**Mobile**](https://github.com/23blocks-OS/mobile-template) | React Native (Expo 52) | Expo Router, secure token storage | [![Use Template](https://img.shields.io/badge/Use_Template-green?style=for-the-badge)](https://github.com/23blocks-OS/mobile-template/generate) |
 
 ## Quick Start
 
-Use [degit](https://github.com/Rich-Harris/degit) to clone a template without git history:
+### Option 1: Use GitHub Template (Recommended)
+
+1. Click one of the **"Use Template"** buttons above
+2. Name your repository and click **"Create repository"**
+3. Clone your new repo and install dependencies:
 
 ```bash
-# Next.js template
-npx degit 23blocks-OS/app-templates/nextjs my-nextjs-app
-cd my-nextjs-app && npm install
-
-# Angular template
-npx degit 23blocks-OS/app-templates/angular my-angular-app
-cd my-angular-app && npm install
-
-# React Native (Expo) template
-npx degit 23blocks-OS/app-templates/mobile my-mobile-app
-cd my-mobile-app && npm install
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO && npm install
 ```
 
-Then configure your environment and start developing:
+### Option 2: Use degit
+
+Alternatively, use [degit](https://github.com/Rich-Harris/degit) to clone without git history:
+
+```bash
+# Next.js
+npx degit 23blocks-OS/nextjs-template my-app
+
+# Angular
+npx degit 23blocks-OS/angular-template my-app
+
+# Mobile
+npx degit 23blocks-OS/mobile-template my-app
+```
+
+### Configure and Run
+
+After cloning, configure your environment and start developing:
 
 ```bash
 # Next.js / Mobile
@@ -111,9 +125,9 @@ These templates give you a head start with pre-built integrations for all 23bloc
 ## Documentation
 
 - [23blocks SDK Documentation](https://github.com/23blocks-OS/frontend-sdk)
-- [Next.js Template README](./nextjs/README.md)
-- [Angular Template README](./angular/README.md)
-- [Mobile Template README](./mobile/README.md)
+- [Next.js Template](https://github.com/23blocks-OS/nextjs-template)
+- [Angular Template](https://github.com/23blocks-OS/angular-template)
+- [Mobile Template](https://github.com/23blocks-OS/mobile-template)
 
 ## Contributing
 
