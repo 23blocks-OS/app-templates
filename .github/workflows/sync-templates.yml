@@ -22,6 +22,7 @@ jobs:
           destination-repository-name: 'nextjs-template'
           target-branch: main
           commit-message: 'sync: update from app-templates monorepo'
+          create-target-branch-if-needed: true
 
   sync-angular:
     name: Sync Angular Template
@@ -39,6 +40,7 @@ jobs:
           destination-repository-name: 'angular-template'
           target-branch: main
           commit-message: 'sync: update from app-templates monorepo'
+          create-target-branch-if-needed: true
 
   sync-mobile:
     name: Sync Mobile Template
@@ -56,3 +58,4 @@ jobs:
           destination-repository-name: 'mobile-template'
           target-branch: main
           commit-message: 'sync: update from app-templates monorepo'
+          create-target-branch-if-needed: true
