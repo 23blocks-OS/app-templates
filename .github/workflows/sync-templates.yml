@@ -1,0 +1,58 @@
+name: Sync Templates
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync-nextjs:
+    name: Sync Next.js Template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to nextjs-template repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.NEXTJS_TEMPLATE_DEPLOY_KEY }}
+        with:
+          source-directory: 'nextjs'
+          destination-github-username: '23blocks-OS'
+          destination-repository-name: 'nextjs-template'
+          target-branch: main
+          commit-message: 'sync: update from app-templates monorepo'
+
+  sync-angular:
+    name: Sync Angular Template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to angular-template repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.ANGULAR_TEMPLATE_DEPLOY_KEY }}
+        with:
+          source-directory: 'angular'
+          destination-github-username: '23blocks-OS'
+          destination-repository-name: 'angular-template'
+          target-branch: main
+          commit-message: 'sync: update from app-templates monorepo'
+
+  sync-mobile:
+    name: Sync Mobile Template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to mobile-template repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.MOBILE_TEMPLATE_DEPLOY_KEY }}
+        with:
+          source-directory: 'mobile'
+          destination-github-username: '23blocks-OS'
+          destination-repository-name: 'mobile-template'
+          target-branch: main
+          commit-message: 'sync: update from app-templates monorepo'

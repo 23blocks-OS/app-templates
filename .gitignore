@@ -1,0 +1,16 @@
+# Internal planning (AI-generated, not for public)
+.ai-plan.md
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
